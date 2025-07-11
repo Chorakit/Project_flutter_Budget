@@ -30,11 +30,28 @@ class _ExpensesState extends State<Expenses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
+      ),
       body: Column(
         children: [
           const Text('The chart'),
           Expanded(child: ExpensesList(expenses: _registeredExpenses)),
         ],
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: InkWell(
+          onTap: () {},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Icon(Icons.add),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
