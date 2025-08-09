@@ -83,12 +83,7 @@ class _ExpensesState extends State<Expenses> {
           IconButton(onPressed: _openAddExpenseOverlay, icon: Icon(Icons.add)),
         ],
       ),
-      body: Column(
-        children: [
-          //const Text('The chart'),
-          Expanded(child: mainConteent),
-        ],
-      ),
+      body: Column(children: [Expanded(child: mainConteent)]),
       bottomNavigationBar: BottomAppBar(
         child: InkWell(
           onTap: () {},

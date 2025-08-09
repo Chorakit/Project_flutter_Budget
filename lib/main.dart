@@ -12,6 +12,7 @@ void main() {
         useMaterial3: true,
         colorScheme: kColorScheme,
       ).copyWith(
+        scaffoldBackgroundColor: kColorScheme.primaryContainer,
         appBarTheme: AppBarTheme().copyWith(
           backgroundColor: kColorScheme.onPrimaryContainer,
           foregroundColor: kColorScheme.primaryContainer,
@@ -27,9 +28,9 @@ void main() {
         ),
         textTheme: ThemeData().textTheme.copyWith(
           titleLarge: TextStyle(
-            fontWeight: FontWeight.normal,
+            fontWeight: FontWeight.bold,
             color: kColorScheme.onSecondaryContainer,
-            fontSize: 14,
+            fontSize: 16,
           ),
         ),
       ),
