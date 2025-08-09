@@ -30,7 +30,9 @@ class ExpensesList extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   child: Text(
                     'Deleted',
-                    style: Theme.of(context).textTheme.titleLarge,
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      color: Theme.of(context).colorScheme.error,
+                    ),
                   ),
                 ),
               ),

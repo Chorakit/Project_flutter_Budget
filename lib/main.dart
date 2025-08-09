@@ -5,9 +5,31 @@ var kColorScheme = ColorScheme.fromSeed(
   seedColor: Color.fromARGB(255, 96, 59, 181),
 );
 
+var kDarkColorScheme = ColorScheme.fromSeed(
+  brightness: Brightness.dark,
+  seedColor: Color.fromARGB(255, 30, 62, 82),
+);
+
 void main() {
   runApp(
     MaterialApp(
+      darkTheme: ThemeData.from(
+        useMaterial3: true,
+        colorScheme: kDarkColorScheme,
+      ).copyWith(
+        scaffoldBackgroundColor: kDarkColorScheme.surface,
+        textTheme: ThemeData.dark().textTheme.copyWith(
+          titleLarge: TextStyle(
+            fontWeight: FontWeight.normal,
+            color: kDarkColorScheme.onSecondaryContainer,
+            fontSize: 14,
+          ),
+        ),
+        cardTheme: CardTheme().copyWith(
+          color: kDarkColorScheme.secondaryContainer,
+          margin: EdgeInsets.all(4),
+        ),
+      ),
       theme: ThemeData.from(
         useMaterial3: true,
         colorScheme: kColorScheme,
@@ -34,6 +56,7 @@ void main() {
           ),
         ),
       ),
+      themeMode: ThemeMode.system,
       home: Expenses(),
     ),
   );
