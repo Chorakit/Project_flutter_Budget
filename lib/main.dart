@@ -34,7 +34,7 @@ void main() {
         useMaterial3: true,
         colorScheme: kColorScheme,
       ).copyWith(
-        scaffoldBackgroundColor: kColorScheme.primaryContainer,
+        //scaffoldBackgroundColor: kColorScheme.primaryContainer,
         appBarTheme: AppBarTheme().copyWith(
           backgroundColor: kColorScheme.onPrimaryContainer,
           foregroundColor: kColorScheme.primaryContainer,
